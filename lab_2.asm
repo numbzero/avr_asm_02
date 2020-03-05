@@ -16,7 +16,6 @@ EXT_INT_0:
 	in R17, SREG
 	
 	// increment OCR1AL and OCR1BL
-	in R18, OCR1AL
 	inc R18
 	out OCR1AL, R18
 	out OCR1BL, R18
@@ -31,7 +30,6 @@ EXT_INT_1:
 	in R17, SREG
 
 	// decrement OCR1AL and OCR1BL
-	in R18, OCR1AL
 	dec R18
 	out OCR1AL, R18
 	out OCR1BL, R18
@@ -83,9 +81,9 @@ RESET:
 	ldi R16, 0x6d ; ICR1L  = 110 - 1
 	out ICR1L, R16
 	
-	ldi R16, 0x00
-	out OCR1AL, R16
-	out OCR1BL, R16
+	ldi R18, 0x00 ; R18 used for OCR1xL
+	out OCR1AL, R18
+	out OCR1BL, R18
 
 MAIN:
 	rjmp MAIN
