@@ -15,14 +15,10 @@ EXT_INT_0:
 	// store state of SREG
 	in R17, SREG
 	
-	// increment OCR1AL
+	// increment OCR1AL and OCR1BL
 	in R18, OCR1AL
 	inc R18
 	out OCR1AL, R18
-
-	// decrement OCR1BL
-	in R18, OCR1BL
-	dec R18
 	out OCR1BL, R18
 
 	// restore state of SREG
@@ -34,14 +30,10 @@ EXT_INT_1:
 	// store state of SREG
 	in R17, SREG
 
-	// decrement OCR1AL 
+	// decrement OCR1AL and OCR1BL
 	in R18, OCR1AL
 	dec R18
 	out OCR1AL, R18
-	
-	// increment OCR1BL
-	in R18, OCR1BL
-	inc R18
 	out OCR1BL, R18
 
 	// restore state of SREG
@@ -82,7 +74,7 @@ RESET:
 	// clear OC1A on compare match (output to low  level)
 	// set   OC1B on compare match (output to high level)
 
-	ldi R16, (1 << COM1A1) | (1 << COM1A0) | (1 << COM1B1) | (1 << COM1B0) | (1 << WGM11) 
+	ldi R16, (1 << COM1A1) | (1 << COM1B1) | (1 << COM1B0) | (1 << WGM11) 
 	out TCCR1A, R16
 
 	ldi R16, (1 << WGM13) | (1 << WGM12) | (1 << CS11)
@@ -91,15 +83,9 @@ RESET:
 	ldi R16, 0x6d ; ICR1L  = 110 - 1
 	out ICR1L, R16
 	
-
-	ldi R16, 0x00 ; OCR1AL =  0 - 0%;
+	ldi R16, 0x00
 	out OCR1AL, R16
-
-	ldi R16, 0x6c ; OCR1BL = 109 - 100% 
 	out OCR1BL, R16
 
 MAIN:
-	nop
-	nop
-	nop
 	rjmp MAIN
