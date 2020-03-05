@@ -1,0 +1,27 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.30</VERSION>
+ <DEVICE>ATmega32</DEVICE>
+ <WORKING_DIR>D:\Personal\learn\avr_asm\lab_2</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\Programs\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Personal\learn\avr_asm\lab_2\lab_2.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\Programs\Atmel\AVR Tools\AvrAssembler2\Appnotes\m32def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Personal\learn\avr_asm\lab_2\lab_2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>D:\Personal\learn\avr_asm\lab_2\lab_2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>D:\Personal\learn\avr_asm\lab_2\lab_2.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>D:\Personal\learn\avr_asm\lab_2\lab_2.asm</FILE><LINE>53</LINE></RESET>
+  <EXT_INT_0><FILE>D:\Personal\learn\avr_asm\lab_2\lab_2.asm</FILE><LINE>14</LINE></EXT_INT_0>
+  <EXT_INT_1><FILE>D:\Personal\learn\avr_asm\lab_2\lab_2.asm</FILE><LINE>33</LINE></EXT_INT_1>
+  <MAIN><FILE>D:\Personal\learn\avr_asm\lab_2\lab_2.asm</FILE><LINE>101</LINE></MAIN>
+ </LABELS>
+</ASSEMBLER_INFO>
